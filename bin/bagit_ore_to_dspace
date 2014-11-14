@@ -1,8 +1,9 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby -rubygems
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib')))
 
 require 'optparse'
 require 'methadone'
-require 'bagit_ore_to_dspace.rb'
+require 'bagit_ore_to_dspace'
 
 class App
   include Methadone::Main
@@ -12,6 +13,7 @@ class App
     # your program code here
     # You can access CLI options via
     # the options Hash
+    BagitOreToDspace::Base.new(bag_path: ARGV[0], dest_path: ARGV[1]).run
   end
 
   # supplemental methods here

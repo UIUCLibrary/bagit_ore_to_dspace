@@ -8,8 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = BagitOreToDspace::VERSION
   spec.authors       = ["Nushrat Jahan Khan"]
   spec.email         = ["njkhan2@illinois.edu"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{DSpace packager for bags with ORE}
   spec.homepage      = ""
   spec.license       = ""
 
@@ -22,6 +21,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency('rdoc')
   spec.add_development_dependency('aruba')
-  spec.add_development_dependency('rake')
+  # spec.add_development_dependency('rake')
   spec.add_dependency('methadone', '~> 1.8.0')
+
+  spec.add_development_dependency('nokogiri')
+  spec.add_development_dependency('bagit')
+  # spec.add_dependency('')
 end
